@@ -8,3 +8,8 @@ class Main {
     System.out.println(first + " + " + second + " = "  + sum);
   }
 }
+
+
+
+
+output:10 + 20 = 30
