@@ -1,0 +1,26 @@
+public class main {
+ 
+    public static void main(String[] args)
+    {
+ 
+        int x = 100;
+        int y = 200;
+ 
+        System.out.println("Before Swap");
+        System.out.println("x = " + x);
+        System.out.println("y = " + y);
+ 
+        int temp = x;
+        x = y;
+        y = temp;
+ 
+        System.out.println("After swap");
+        System.out.println("x = " + x);
+        System.out.println("y = " + y);
+    }
+}
+
+
+
+output:Before Swap
+x = 100y = 200After swapx = 200y = 100
