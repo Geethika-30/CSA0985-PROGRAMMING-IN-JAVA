@@ -6,7 +6,13 @@ public class AreaOfCircle {
       Scanner sc = new Scanner(System.in);
       System.out.println("Enter the radius of the circle :");
       radius = sc.nextInt();
-      area = (radius*radius)*Math.PI;
+      area = (radius*radius)*3.14;
       System.out.println("Area of the circle is :"+area);
    }
 }
+
+
+output:
+Enter the radius of the circle :
+10
+Area of the circle is :314.0
