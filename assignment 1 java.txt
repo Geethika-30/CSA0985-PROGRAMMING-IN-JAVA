@@ -1,0 +1,129 @@
+ASSIGNMENT -1
+CSA0985
+PROGRAMMING IN JAVA
+Name: Mn.Geethika
+Reg no: 192121108
+Write a program to reverse a word using loop?
+public class Reverse   
+{    
+    public static void main(String[] args) {    
+        String string = "saveetha";    
+        String reversedStr = "";    
+        for(int i = string.length()-1; i >= 0; i--){    
+            reversedStr = reversedStr + string.charAt(i);    
+        }    
+        System.out.println("Original string: " + string);    
+        System.out.println("Reverse of given string: " + reversedStr);    
+    }    
+}    
+output:
+Original string: saveetha
+Reverse of given string: ahteeva
+2.Write a program to check the entered user name is valid or not?
+
+import java.util.*; 
+import java.io.*; 
+public class user 
+{ 
+ public static void main(String[] args) 
+ { 
+ 
+ String a,b; 
+ Scanner sc=new Scanner(System.in); 
+ System.out.println("Enter the username:"); 
+ a=sc.next(); 
+ System.out.println("Re Enter the username:"); 
+ b=sc.next(); 
+ if(a.equals(b)) 
+ { 
+System.out.println("Username is valid"); 
+ 
+ } 
+ else 
+ { 
+ System.out.println("Username is Invalid"); 
+ } 
+ 
+ } 
+} 
+
+Output:
+Enter the username:
+shini
+Re Enter the username:
+shiny
+Username is Invalid
+
+
+3. Write a program to reverse a number using loop?
+import java.io.*; 
+import java.util.*; 
+public class reverse 
+{ 
+ public static void main(String arg[]) 
+ {
+     try 
+ { 
+ Scanner sc=new Scanner(System.in); 
+ int n,re=0,rem; 
+ System.out.println("Enter a number:"); 
+ n=sc.nextInt(); 
+ while(n!=0) 
+ { 
+ rem=n%10; 
+ re=re*10+rem; 
+ n=n/10; 
+ } 
+ 
+ System.out.println("The reversed number is:"+re); 
+ } 
+ catch(Exception e) 
+ { 
+ System.out.println("Enter a valid number"); 
+ } 
+ } 
+}
+Output:
+Enter a number:
+123456
+The reversed number is:654321
+4. Write a program to find whether the person is eligible for vote or not. And if that particular person is not eligible, then print how many years are left to be eligible.
+
+import java.util.*; 
+import java.io.*; 
+public class vote 
+{ 
+ public static void main(String[] args) 
+ { 
+ try 
+ { 
+ int a,b; 
+ Scanner sc=new Scanner(System.in); 
+ System.out.println("Enter your age:"); 
+ a=sc.nextInt(); 
+ if(a>=18) 
+ { 
+ System.out.println("You are eligible to vote"); 
+ 
+ } 
+ else 
+ { 
+ b=18-a; 
+ System.out.println("You are allowed after"+b+"years"); 
+ } 
+ if(a<0) 
+ { 
+     System.out.println("Entry only integer value"); 
+ } 
+ } 
+ catch(Exception e) 
+ { 
+ System.out.println("Entry only positive integer value"); 
+ } 
+ } 
+}
+
+Output:
+Enter your age:
+12
+You are allowed after6years
