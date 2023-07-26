@@ -1,0 +1,30 @@
+import java.util.Scanner;
+class AreaCal
+{
+	int res=0;
+	AreaCal(int x,int y)
+	{
+	 res=x*y;
+	}
+}
+class mul
+{
+public static void main(String[] arg)
+{
+	int a,b;
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter length");
+	a=sc.nextInt();
+	System.out.println("Enter breadth");
+	b=sc.nextInt();
+	AreaCal c=new AreaCal(a,b);
+	System.out.println("Area of rectangle is : "+c.res);
+}
+}
+
+
+output:Enter length
+14
+Enter breadth
+12
+Area of rectangle is : 168
