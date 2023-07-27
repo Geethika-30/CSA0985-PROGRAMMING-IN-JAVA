@@ -1,0 +1,299 @@
+ASSIGNMENT -2
+CSA0985
+PROGRAMMING IN JAVA
+
+GEETHIKA MN
+192121108
+IT
+
+Write a program for Bank Management System using classes and object?
+
+import java.util.Scanner;
+class Bank
+ {
+    private String accno;
+    private String name;
+    private long balance;
+    Scanner KB = new Scanner(System.in);
+    void openAccount() 
+{
+        System.out.print("Enter Account No: ");
+        accno = KB.next();
+        System.out.print("Enter Name: ");
+        name = KB.next();
+        System.out.print("Enter Balance: ");
+        balance = KB.nextLong();
+    }
+    void showAccount() 
+{
+        System.out.println(accno + "," + name + "," + balance);
+    }
+    void deposit()
+ {
+        long amt;
+        System.out.println("Enter Amount U Want to Deposit : ");
+        amt = KB.nextLong();
+        balance = balance + amt;
+    }
+    void withdrawal()
+ {
+        long amt;
+        System.out.println("Enter Amount U Want to withdraw : ");
+        amt = KB.nextLong();
+        if (balance >= amt)
+       {
+            balance = balance - amt;
+        } 
+       else 
+       {
+            System.out.println("Less Balance..Transaction Failed..");
+        }
+    }
+    boolean search(String acn) {
+        if (accno.equals(acn)) {
+            showAccount();
+            return (true);
+        }
+        return (false);
+    }
+}
+
+class ExBank 
+{
+    public static void main(String arg[])
+ {
+        Scanner KB = new Scanner(System.in);
+        System.out.print("How Many Customer U Want to Input : ");
+
+        int n = KB.nextInt();
+        Bank C[] = new Bank[n];
+        for (int i = 0; i < C.length; i++) 
+       {
+            C[i] = new Bank();
+            C[i].openAccount();
+        }
+        int ch;
+        do 
+{
+            System.out.println("Main Menu\n1. Display All\n 2. Search By Account\n 3. Deposit\n 4. Withdrawal\n 5.E xit ");
+                System.out.println("Ur Choice :"); ch = KB.nextInt();
+                switch (ch)
+                    {
+                    case 1:
+                        for (int i = 0; i < C.length; i++) {
+                            C[i].showAccount();
+                        }
+                        break;
+
+                    case 2:
+                        System.out.print("Enter Account No U Want to Search...: ");
+                        String acn = KB.next();
+                        boolean found = false;
+                        for (int i = 0; i < C.length; i++) 
+                       {
+                            found = C[i].search(acn);
+                            if (found)
+                            {
+                                break;
+                            }
+                        }
+                        if (!found)   
+                      {  
+                            System.out.println("Search Failed..Account Not Exist..");
+                        }
+                        break;
+
+                    case 3:
+                        System.out.print("Enter Account No : ");
+                        acn = KB.next();
+                        found = false;
+                        for (int i = 0; i < C.length; i++) 
+                        {
+                            found = C[i].search(acn);
+                            if (found) 
+                           {
+                                C[i].deposit();
+                                break;
+                            }
+                        }
+                        if (!found) 
+                       {
+                            System.out.println("Search Failed..Account Not Exist..");
+                        }
+                        break;
+
+                    case 4:
+                        System.out.print("Enter Account No : ");
+                        acn = KB.next();
+                        found = false;
+                        for (int i = 0; i < C.length; i++)
+                       {
+                            found = C[i].search(acn);
+                            if (found) {
+                                C[i].withdrawal();
+                                break;
+                            }
+                        }
+                        if (!found) 
+                       {
+                            System.out.println("Search Failed..Account Not Exist..");
+                        }
+                        break;
+
+                    case 5:
+                        System.out.println("Good Bye..");
+                        break;
+                }
+            }
+            while (ch != 5);
+        }
+    }
+
+
+Output:
+How Many Customer U Want to Input : 1
+Enter Account No: 101
+Enter Name: shini
+Enter Balance: 4000
+Main Menu
+1. Display All
+ 2. Search By Account
+ 3. Deposit
+ 4. Withdrawal
+ 5.E xit 
+Ur Choice :
+5
+Good Bye..
+
+
+Write a program for Factorial using classes and objects?
+
+import java.util.Scanner;
+ class Factorial
+{
+    private int n;
+    
+    public void input() {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter the number: ");
+        n = in.nextInt();
+    }
+    
+    public void fact() {
+        int f = 1;
+        for (int i = 1; i <= n; i++)
+            f *= i;
+        System.out.println("Factorial of " + n 
+            + " = " + f);
+    }
+    
+    public static void main(String args[]) {
+        Factorial obj = new Factorial();
+        obj.input();
+        obj.fact();
+    }
+}
+Output:
+Enter the number: 5
+Factorial of 5 = 120
+Write a program for Armstrong Number using classes and objects?
+
+import java.util.Scanner;
+public class Armstrong
+ {
+ public static void main(String[] args)
+ {
+  int num, number, temp, total = 0;
+  System.out.println("Enter  Digit Number:");
+  Scanner scanner = new Scanner(System.in);
+  num = scanner.nextInt();
+  scanner.close();
+  number = num;
+  for( ;number!=0;number /= 10) 
+{
+   temp = number % 10;
+   total = total + temp*temp*temp;
+  }
+ if(total == num)
+  System.out.println(num + " is an Armstrong number");
+ else
+  System.out.println(num + " is not an Armstrong number");
+ }
+}
+Output:
+Enter Digit Number:
+6789
+6789 is not an Armstrong number	
+
+Write a program for Sum of the digits using classes and objects?
+
+import java.util.Scanner;  
+public class SumOfDigitsExample1   
+{  
+public static void main(String args[])  
+{  
+int number, digit, sum = 0;  
+
+Scanner sc = new Scanner(System.in);  
+System.out.print("Enter the number: ");  
+number = sc.nextInt();  
+
+while(number > 0)  
+
+{   
+digit = number % 10;  
+sum = sum + digit;  
+number = number / 10;  
+}
+  
+System.out.println("Sum of Digits: "+sum);  
+}  
+}  
+
+Output:
+
+Enter the number: 1234
+Sum of Digits: 10
+5.Write a program that accepts and float and compute the value n+nn+nnn+nnnn?
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Input number: ");
+        String n = in.nextLine();
+        if (n.matches("[0-9]+")) {
+            System.out.println(n + " + " + n + n + " + " + n + n + n + "+" + n + n + n + n + " = "
+                    + (Integer.parseInt(n) + Integer.parseInt(n + n) + Integer.parseInt(n + n + n) + Integer.parseInt(n + n + n + n)));
+        } else {
+            System.out.println("Error: invalid input.");
+        }
+    }
+}
+Output:
+Input number: 4
+4 + 44 + 444+4444 = 4936
+
+
+6.write a program for Floyd triangle?
+import java.util.*;
+class GFG {
+    public static void main(String[] args)
+    {
+        int n = 5;
+        int i, j, k = 1;
+        for (i = 1; i <= n; i++) {
+            for (j = 1; j <= i; j++) {
+                System.out.print(k + "  ");
+                k++;
+            }
+            System.out.println();
+        }
+    }
+}
+Output:
+1  
+2  3  
+4  5  6  
+7  8  9  10  
+11  12  13  14  15  
