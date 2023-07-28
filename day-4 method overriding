@@ -1,0 +1,19 @@
+class Student
+{  
+  void run() 
+  {
+      System.out.println("Student is listening");
+      
+  }  
+}
+class Marks extends Student 
+{  
+  public static void main(String args[])
+  {  
+  Marks obj = new Marks();  
+  obj.run();  
+  }  
+}  
+
+output:
+Student is listening
