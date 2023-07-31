@@ -1,0 +1,22 @@
+public class area
+{
+int length,breadth;
+area(int l, int b){
+length = l;
+ breadth = b;
+}
+public int setDim(){
+int results = length * breadth;
+return results;
+}
+ public void getArea(){
+System.out.println(setDim());
+}
+public static void main(String []args){
+area r =new area(6,5);
+r.getArea();
+   
+}
+}
+
+output:30
