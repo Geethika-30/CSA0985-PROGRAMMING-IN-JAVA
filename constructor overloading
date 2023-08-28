@@ -1,0 +1,28 @@
+class Employee{  
+    int id;  
+    String name;  
+    int age;  
+ 
+    Employee(int i,String n){  
+    id = i;  
+    name = n;  
+    }  
+ 
+   Employee(int i,String n,int a){  
+    id = i;  
+    name = n;  
+    age=a;  
+    }  
+    void display(){System.out.println(id+" "+name+" "+age);}  
+   
+    public static void main(String args[]){  
+    Employee s1 = new Employee(108,"rahul",22);  
+    Employee s2 = new Employee(222,"nihal",25);  
+    s1.display();  
+    s2.display();  
+   }  
+}
+
+output:
+108 rahul 22
+222 nihal 25
