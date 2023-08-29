@@ -1,0 +1,22 @@
+import java.util.*;
+class skipping{
+public static void main(String[] args) 
+{
+int m=50;
+int n=100;
+int k=7;
+while(m<=n)
+{
+System.out.println(m);
+m=m+k+1;
+}
+}
+}
+
+output:
+5058
+66
+74
+82
+90
+98
