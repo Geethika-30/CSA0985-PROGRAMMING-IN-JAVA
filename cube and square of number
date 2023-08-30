@@ -1,0 +1,15 @@
+import java.util.Scanner;
+class sqcube {
+public static void main(String[] args)
+{
+Scanner input=new Scanner(System.in);
+System.out.print("Enter the number: ");
+float n=input.nextFloat();
+System.out.println("square: "+(n*n));
+System.out.println("cube: "+(n*n*n));
+}
+}
+
+output:
+Enter the number: 5
+square: 25.0cube: 125.0
